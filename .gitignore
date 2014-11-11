@@ -1,0 +1,6 @@
+dist/
+node_modules/
+l10n/
+tmp/
+WORK/
+.sass-cache/
