@@ -1,0 +1,110 @@
+
+html {
+  
+  #logoimg {
+    margin-top: 6px;
+    margin-left: 24px;
+    height: 70px;
+  }
+  .gh {
+    display: none;
+  }
+
+  //Diners
+  &.nis_dc {
+    background-color: #000;
+    color: #000;
+    font-family: arial, helvetica, clean, sans-serif;
+
+    .row:first-child > div {
+      background-color: rgba(45, 45, 45, 0.77);
+    }
+
+    .row > div {
+      background-color: rgba(255, 255, 255, 1);
+    }
+
+    #logo {
+      background-image: url(../img/dcse_logo.png);
+      background-size: 175px 45px;
+      width: 175px;
+      height: 70px;
+      margin-left: 22px;
+      display: block;
+      content: '';
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: "Gill Sans W01 Medium", Arial, "Century Schoolbook", "Times New Roman", Times, serif;
+      font-weight: 500;
+      font-style: normal;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+  //Eurocard
+  &.nis_ec {
+    background: url(../img/eurocard_bg.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+       -moz-background-size: cover;
+         -o-background-size: cover;
+            background-size: cover;
+
+    .row:first-child > div {
+      background-color: rgba(250, 249, 249, 0.7);
+    }
+    .row > div {
+      background-color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  // Generic Co Brand...
+  &.nis_cobrand {
+    background-color: #f4f4f4;
+
+    .wrapper {
+      width: 310px;
+      @include mq(smallscreens) {
+        width: 500px;
+      }
+    }
+
+    .gh {
+      display: none;
+      margin-bottom: 14px;
+      margin-left: 20px;
+    }
+
+    .wrapper .row:last-child {
+      &:after {
+        z-index: 1;
+        margin-left: -10px;
+        content: "";
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-image: url(../img/shadow.png);
+        background-size: 320px 25px;
+        width: 320px;
+        height: 25px;
+        @include mq(smallscreens) {
+          background-size: 520px 25px;
+          width: 520px;
+          height: 25px;
+        }
+        //@include mq(retina) {
+        //  background-image: url(../img/shadow@2x.png);
+        //}
+        
+      }
+    }
+
+    .row > div {
+      background-color: #fff;
+    }
+
+    .row:first-child > div {
+      margin-bottom: 3px;
+    }
+  }
+
+}

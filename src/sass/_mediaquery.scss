@@ -1,0 +1,28 @@
+/***********
+BREAKPOINTS
+***********/
+
+@mixin mq($mq) {
+    // Extra Small screens
+    @if $mq == xsmallscreens {
+        @media only screen and (min-width: $xsmallscreens) { @content ; } 
+    }
+
+    // Small screens
+    @else if $mq == smallscreens {
+        /* Define mobile styles */
+        @media only screen and (min-width: $smallscreens) { @content ; } 
+    }
+
+    @if $mq == retina {
+        @media
+          only screen and (-webkit-min-device-pixel-ratio: 2),
+          only screen and (   min--moz-device-pixel-ratio: 2),
+          only screen and (     -o-min-device-pixel-ratio: 2/1),
+          only screen and (        min-device-pixel-ratio: 2),
+          only screen and (                min-resolution: 192dpi),
+          only screen and (                min-resolution: 2dppx) {
+            @content;
+        }
+    }
+}

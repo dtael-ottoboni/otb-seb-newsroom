@@ -1,0 +1,30 @@
+
+.layout.grid {
+  margin: 0 auto;
+  width: 478px;
+  text-align: left;
+
+  @include mq(smallscreens) {
+    width: 970px;
+    margin: 0 auto;
+  }
+
+  > div {
+
+    width: 100%;
+
+    display: inline-block;
+    margin-bottom: 20px;
+    &:nth-child(even) {
+
+    }
+    &:nth-child(odd) {
+
+    }
+
+    @include mq(smallscreens) {
+      width: 50%;
+      float: left;
+    }
+  }
+}
