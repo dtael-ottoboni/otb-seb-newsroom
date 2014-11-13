@@ -1,6 +1,25 @@
 .module.article-puff {
-    margin: 0 auto;
-    width: 478px;
+    margin: 10px auto 0;
+
+    width: 320px;
+    @include mq(smallscreens) {
+        width: 478px;
+    }
+
+    &:hover {
+        .header figure { 
+            opacity: 1;
+            img {
+                -webkit-transform:scale(1.15);
+                -moz-transform:scale(1.15);
+                -ms-transform:scale(1.15);
+                -o-transform:scale(1.15);
+                transform:scale(1.15);
+            }
+        }
+    }
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px 0px rgba(240,240,240,0.75);
     background-color: rgba(255,255,255,1);
     border: 1px solid rgba(240,240,240,1);
     font-family: "Arial", sans-serif;
@@ -12,17 +31,33 @@
     .header {
         text-align: left;
         display: block;
-        height: 312px;
+        height: 208px;
+        @include mq(smallscreens) {
+            height: 312px;
+        }
+        
         background-color: rgba(0,0,0,1);
         position: relative;
         color: rgba(255,255,255,1);
 
-        img {
-            position: absolute;
-            bottom: 0;
-            left: 0;
+        overflow: hidden;
+        border-radius: 5px 5px 0 0;
+        figure {
             width: 100%;
-            z-index: 0;
+            transition: opacity 0.2s linear;
+            opacity: 0.7;
+            img {
+                -webkit-transition: all 0.5s ease;
+                -moz-transition: all 0.5s ease;
+                -ms-transition: all 0.5s ease;
+                -o-transition: all 0.5s ease;
+                transition: all 0.5s ease;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                z-index: 0;
+                width: 100%;
+            }
         }
 
         h2 {
@@ -38,7 +73,10 @@
 
     }
     .content {
-        height: 70px;
+        height: 145px;
+        @include mq(smallscreens) {
+            height: 70px;
+        }
         margin: 20px;
         > div {
             display: inline-block;
@@ -60,7 +98,10 @@
             text-align: left;
             display: inline-block;
             float: left;
-            width: 360px;
+            width: 200px;
+            @include mq(smallscreens) {
+                width: 360px;
+            }
             margin-right: 0;
         }
 

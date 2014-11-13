@@ -1,11 +1,16 @@
 
 .layout.grid {
   margin: 0 auto;
-  width: 478px;
+  //width: 320px;
   text-align: left;
+  //border: 1px dashed blue;
+  clear: both;
+
+  //background-color: lime;
 
   @include mq(smallscreens) {
     width: 970px;
+    width: 1000px;
     margin: 0 auto;
   }
 
@@ -27,4 +32,16 @@
       float: left;
     }
   }
+  
+  @extend %clearfix;
+  //&:before,
+  //&:after {
+  //    content: " "; /* 1 */
+  //    display: table; /* 2 */
+  //}
+  //&:after {
+  //    clear: both;
+  //}
+
 }
+

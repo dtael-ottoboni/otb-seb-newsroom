@@ -26,7 +26,7 @@ var streamify = require('gulp-streamify');
 var packer = require('gulp-packer');
 var minifyHTML = require('gulp-minify-html');
 
-var projectname = "FE-Gulp-Boilerplate";
+var projectname = "otb-seb-newsroom";
 
 var basepaths = {
     src: 'src/',

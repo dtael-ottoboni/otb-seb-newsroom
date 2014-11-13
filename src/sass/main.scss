@@ -5,8 +5,12 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+figure {
+    margin: 0;
+    padding: 0;
+}
 
-
+@import "extends";
 @import "variables";
 @import "mediaquery";
 @import "layout-grid";

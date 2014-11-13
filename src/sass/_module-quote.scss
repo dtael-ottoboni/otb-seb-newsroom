@@ -1,3 +1,24 @@
+
 .module.quote {
-  
+    width: 320px;
+    margin: 0 auto;
+    @include mq(smallscreens) {
+        width: 700px;
+    }
+
+    .quotechar {
+        color: rgba(253,201,31,1);
+        margin-top: 32px;
+        font-size: 64px;
+        line-height: 10px;
+    }
+
+    .quote {
+        margin-top: -35px;
+        font-style: italic;
+        padding: 30px;
+        font-size: 18px;
+        color: #767676;
+        line-height: 24px;
+    }
 }
