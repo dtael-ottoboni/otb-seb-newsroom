@@ -1,12 +1,9 @@
 
 .layout.grid {
   margin: 0 auto;
-  //width: 320px;
   text-align: left;
-  //border: 1px dashed blue;
   clear: both;
 
-  //background-color: lime;
 
   @include mq(smallscreens) {
     width: 970px;
@@ -19,7 +16,6 @@
     width: 100%;
 
     display: inline-block;
-    margin-bottom: 20px;
     &:nth-child(even) {
 
     }
@@ -34,14 +30,6 @@
   }
   
   @extend %clearfix;
-  //&:before,
-  //&:after {
-  //    content: " "; /* 1 */
-  //    display: table; /* 2 */
-  //}
-  //&:after {
-  //    clear: both;
-  //}
-
+  
 }
 
